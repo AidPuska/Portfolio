@@ -1,9 +1,8 @@
-import { forwardRef, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Footer from "../../components/Footer"
 import Intro from "../../components/Intro"
 import Projects from "../../components/Projects"
 import goUp from '../../assets/goup.svg'
-import Skills from "../../components/Skills"
 
 
 const Home = () => {
