@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="first" width="300" height="300" style="border: 1px solid black"></canvas>
+
+    <script>
+        const ctx = document.getElementById('first').getContext('2d')
+
+        ctx.strokeStyle = 'navy';
+        ctx.lineWidth = 3.0
+        ctx.beginPath();
+        ctx.moveTo(10, 290)
+        ctx.lineTo(290, 290);
+        ctx.lineTo(150, 150);
+        ctx.lineTo(10, 290)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.strokeStyle = 'navy';
+        ctx.lineWidth = 3.0
+        ctx.moveTo(150, 150);
+        ctx.lineTo(290, 10)
+        ctx.lineTo(10, 10);
+        ctx.lineTo(150, 150)
+        ctx.stroke()
+    </script>
+</body>
+
+</html>
