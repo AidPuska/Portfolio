@@ -21,20 +21,59 @@ const buttonVariants = {
     }
 }
 
+const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: 0.5,
+            staggerChildren: 0.08,
+            staggerDirection: 1,
+        },
+    },
+}
+
+const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0
+    }
+}
+
 const Intro = ({ projectRef, footerRef, skillsRef }) => {
 
     const handleClick = () => {
         projectRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
 
+    // text reveal effect
+    const text = "Hi i'm Aid Puška Full stack developer.";
+
     return (
         <div className="grid grid-cols-1 justify-items-center place-content-center relative h-screen">
             <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} src={nate} className="object-cover h-screen w-full" alt="" />
             <Navbar projectRef={projectRef} footerRef={footerRef} skillsRef={skillsRef} />
             <div className="absolute top-[50%] md:top-[58%]">
-                <motion.h1 animate={{ rotate: 360, x: 10 }} transition={{ delay: 0.5 }}
-                    className=" bg-green-700  rounded p-2 text-black self-center text-2xl md:text-3xl drop-shadow-lg ">
-                    Hi i'm Aid Puška Full stack developer</motion.h1>
+                <motion.h1
+                    animate='visible'
+                    initial='hidden'
+                    variants={sentence}
+                    className=" bg-green-700  rounded p-2 text-black self-center text-2xl md:text-3xl drop-shadow-lg "
+                >
+                    {text.split('').map((char, index) => {
+                        return (
+                            <motion.span key={char + '-' + index} variants={letter} transition={{
+                                repeat: Infinity,
+                                repeatType: 'reverse',
+                                duration: 1,
+                                repeatDelay: 2
+                            }}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                </motion.h1>
             </div>
 
 

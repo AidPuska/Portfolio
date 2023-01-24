@@ -3,7 +3,7 @@ import close from '../assets/close.png'
 import emailjs from '@emailjs/browser'
 import { AnimatePresence, motion } from "framer-motion"
 
-const Footer = ({ forwardedRef }) => {
+const Footer = ({ forwardedRef, visitCount }) => {
 
     const [opened, setOpened] = useState(false)
     const [name, setName] = useState('')
@@ -37,7 +37,13 @@ const Footer = ({ forwardedRef }) => {
 
     return (
         <div ref={forwardedRef} className="h-52 bg-green-700 rounded-md m-5 flex items-center relative justify-evenly">
-            <h1 id="foot" class="ml-2 text-black">&copy; 2022 Aid Puska</h1>
+            <div className="flex flex-col items-center">
+                <h1 id="foot" class="ml-2 text-black">&copy; 2022 Aid Puska</h1>
+                <div className="flex gap-1">
+                    <p>Page visits: </p>
+                    <div className="bg-white px-1 rounded-sm" dangerouslySetInnerHTML={{ __html: `<p>${visitCount}</p>` }}></div>
+                </div>
+            </div>
 
 
             {!opened && <button onClick={handleContact} className="p-2 border border-black rounded">Contact me</button>}

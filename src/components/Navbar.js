@@ -32,6 +32,7 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
 
                 <motion.ul initial={{ x: 400 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} class="hidden md:flex flex-row gap-4 py-4 px-4">
                     <motion.li onClick={goToProjects} whileHover={{ y: -10, rotate: -10 }} className="text-white cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Projects</motion.li>
+                    <motion.li onClick={goToSkills} whileHover={{ y: -10, rotate: -10 }} className="text-white cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Skills</motion.li>
                     <motion.li onClick={goToFooter} whileHover={{ y: -10, rotate: -10 }} className="text-white cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Contact</motion.li>
                 </motion.ul>
 
@@ -46,6 +47,7 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
                 {view && <div className='bg-green-600/50 mt-56 absolute rounded right-1 flex justify-center'>
                     <ul class="flex flex-col gap-4 py-4 items-center px-4 md:hidden">
                         <li onClick={goToProjects} className="text-gray-300 hover:font-semibold cursor-pointer">Projects</li>
+                        <motion.li onClick={goToSkills} whileHover={{ y: -10, rotate: -10 }} className="text-white cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Skills</motion.li>
                         <li onClick={goToFooter} className="text-gray-300 hover:font-semibold cursor-pointer">Contact</li>
                     </ul>
                 </div>}

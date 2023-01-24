@@ -3,9 +3,10 @@ import Footer from "../../components/Footer"
 import Intro from "../../components/Intro"
 import Projects from "../../components/Projects"
 import goUp from '../../assets/goup.svg'
+import Skills from "../../components/Skills"
 
 
-const Home = () => {
+const Home = ({ visitCount }) => {
     const projectRef = useRef(null)
     const footerRef = useRef(null)
     const skillsRef = useRef(null)
@@ -44,11 +45,14 @@ const Home = () => {
     }, [])
 
 
+
+
     return (
         <div>
             <Intro projectRef={projectRef} footerRef={footerRef} skillsRef={skillsRef} />
             <Projects forwardedRef={projectRef} />
-            <Footer forwardedRef={footerRef} />
+            <Skills forwardedRef={skillsRef} />
+            <Footer forwardedRef={footerRef} visitCount={visitCount} />
 
             {isVisible && <div onClick={toTop} className="fixed bottom-5 md:bottom-1 right-5 md:right-1 cursor-pointer"><img className="w-10 h-10" src={goUp} alt="" /></div>}
         </div>
