@@ -1,10 +1,12 @@
 import './App.css';
 import Home from './pages/Home/Home'
 
-function App({ visitCount }) {
+function App() {
+
+
   return (
     <div className="App">
-      <Home visitCount={visitCount} />
+      <Home />
     </div>
   );
 }

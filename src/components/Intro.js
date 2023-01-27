@@ -14,7 +14,7 @@ const buttonVariants = {
         }
     },
     hidden: {
-        y: -700
+        y: -900
     },
     visible: {
         y: 0

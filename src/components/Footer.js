@@ -2,8 +2,10 @@ import { useRef, useState } from "react"
 import close from '../assets/close.png'
 import emailjs from '@emailjs/browser'
 import { AnimatePresence, motion } from "framer-motion"
+import { useEffect } from "react"
+import axios from "axios"
 
-const Footer = ({ forwardedRef, visitCount }) => {
+const Footer = ({ forwardedRef }) => {
 
     const [opened, setOpened] = useState(false)
     const [name, setName] = useState('')
@@ -35,13 +37,20 @@ const Footer = ({ forwardedRef, visitCount }) => {
         }, 3000)
     }
 
+    const [viewCount, setViewCount] = useState(0)
+
+    useEffect(() => {
+        axios.get('https://api.countapi.xyz/hit/apuska.netlify/viewCount')
+            .then(result => setViewCount(result.data.value))
+    }, [])
+
     return (
         <div ref={forwardedRef} className="h-52 bg-green-700 rounded-md m-5 flex items-center relative justify-evenly">
             <div className="flex flex-col items-center">
                 <h1 id="foot" class="ml-2 text-black">&copy; 2022 Aid Puska</h1>
                 <div className="flex gap-1">
                     <p>Page visits: </p>
-                    <div className="bg-white px-1 rounded-sm" dangerouslySetInnerHTML={{ __html: `<p>${visitCount}</p>` }}></div>
+                    <div className="bg-white px-1 rounded-sm" /* dangerouslySetInnerHTML={{ __html: `<p>${viewCount}</p>` }} */>{viewCount}</div>
                 </div>
             </div>
 

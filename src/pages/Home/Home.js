@@ -6,7 +6,7 @@ import goUp from '../../assets/goup.svg'
 import Skills from "../../components/Skills"
 
 
-const Home = ({ visitCount }) => {
+const Home = () => {
     const projectRef = useRef(null)
     const footerRef = useRef(null)
     const skillsRef = useRef(null)
@@ -52,7 +52,7 @@ const Home = ({ visitCount }) => {
             <Intro projectRef={projectRef} footerRef={footerRef} skillsRef={skillsRef} />
             <Projects forwardedRef={projectRef} />
             <Skills forwardedRef={skillsRef} />
-            <Footer forwardedRef={footerRef} visitCount={visitCount} />
+            <Footer forwardedRef={footerRef} />
 
             {isVisible && <div onClick={toTop} className="fixed bottom-5 md:bottom-1 right-5 md:right-1 cursor-pointer"><img className="w-10 h-10" src={goUp} alt="" /></div>}
         </div>

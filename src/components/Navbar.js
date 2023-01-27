@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 import { useRef, useState } from 'react'
 /* import { NavLink, Link } from 'react-router-dom' */
 
@@ -6,8 +7,10 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
 
     const [view, setView] = useState(false)
 
-    const handleClick = () => {
+    const handleClick = async () => {
         setView(!view)
+        const res = await fetch('./netlify/functions/func')
+            .then(response => console.log(response))
     }
 
     const goToProjects = () => {
@@ -28,7 +31,7 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
     return (
         <div>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, type: 'spring' }} className="flex bg-gradient-to-r from-green-700 w-full mt-5 rounded-md absolute top-0 right-0 justify-between items-center h-20">
-                <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} className='py-4 px-4 text-black text-lg'>PortFolio</motion.p>
+                <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} className='py-4 px-4 text-black text-lg'>Portfolio</motion.p>
 
                 <motion.ul initial={{ x: 400 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} class="hidden md:flex flex-row gap-4 py-4 px-4">
                     <motion.li onClick={goToProjects} whileHover={{ y: -10, rotate: -10 }} className="text-white cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Projects</motion.li>
