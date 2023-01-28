@@ -33,6 +33,7 @@ const Projects = ({ forwardedRef }) => {
                                 <motion.img className="w-[300px] md:w-[380px] h-52 md:h-[300px] border border-green-800 rounded object-cover" src={project.img} alt='project_image' />
 
                                 <motion.p className="w-[300px] md:w-[350px]">Made with: {project.madeWith}</motion.p>
+                                <motion.a href={project.link} target="_blank" rel="noopener noreferrer" className="w-[300px] md:w-[350px] text-green-600">{project.link}</motion.a>
                             </motion.div>
                         )}
                     </InView>

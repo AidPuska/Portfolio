@@ -26,7 +26,7 @@ const Skills = ({ forwardedRef }) => {
 
     return (
         <div ref={forwardedRef} className='w-full flex relative justify-center py-10 bg-black/95'>
-            <div className='text-white text-center'>
+            <div className='text-[#ffeaee] text-center'>
                 <h1 className='mb-5 text-xl font-light'>Skills:</h1>
                 <ul className='flex gap-10 justify-center text-md font-light'>
                     <li>React</li>

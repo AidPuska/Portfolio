@@ -17,14 +17,16 @@ export const projects = [
         name: 'Projects Managment',
         desc: 'Add new project or project part, assign it to some registred user, se online/offline users',
         img: proManag,
-        madeWith: 'FrontEnd(React, Tailwind CSS) & BackEnd(Firebase)'
+        madeWith: 'FrontEnd(React, Tailwind CSS) & BackEnd(Firebase)',
+        link: 'https://projectsmanagment-f43a4.web.app/'
     },
     {
         id: 2,
         name: 'Portfolio page',
         desc: 'Portfolio page for personal use',
         img: portfolio,
-        madeWith: 'React, Tailwind CSS, Framer motion for animations'
+        madeWith: 'React, Tailwind CSS, Framer motion for animations',
+        link: 'https://apuska.netlify.app/'
     },
     {
         id: 3,
@@ -38,6 +40,7 @@ export const projects = [
         name: 'Vaktija Interactive Map',
         desc: 'Get Prayer Time for towns available in Vaktija.ba Api',
         img: vaktija,
-        madeWith: 'React, Pure CSS, Mapbox, Vaktija Api'
+        madeWith: 'React, Pure CSS, Mapbox, Vaktija Api',
+        link: 'https://vaktijainteractivemap.netlify.app/'
     }
 ]
