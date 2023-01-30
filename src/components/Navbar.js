@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { useRef, useState } from 'react'
-/* import { NavLink, Link } from 'react-router-dom' */
 
 const Navbar = ({ projectRef, footerRef, skillsRef }) => {
 
