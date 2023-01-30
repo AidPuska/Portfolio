@@ -59,7 +59,7 @@ const Intro = ({ projectRef, footerRef, skillsRef }) => {
                     animate='visible'
                     initial='hidden'
                     variants={sentence}
-                    className=" bg-gradient-to-r from-green-700 to-[#192030] rounded p-2 text-[#ffeaee] self-center text-2xl md:text-3xl drop-shadow-lg "
+                    className=" bg-gradient-to-r from-green-700 to-[#192030] rounded p-2 text-[#ffeaee] self-center text-2xl md:text-2xl drop-shadow-lg "
                 >
                     {text.split('').map((char, index) => {
                         return (

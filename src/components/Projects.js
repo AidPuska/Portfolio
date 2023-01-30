@@ -30,7 +30,7 @@ const Projects = ({ forwardedRef }) => {
                                 <motion.p className="text-2xl w-full text-center font-medium border-bot border bg-green-500 p-1 border-green-800 flex items-center justify-center"><img src={title} className='w-4 h-4' alt="" />{project.name}</motion.p>
                                 <motion.p className="text-lg font-light text-center w-[300px] md:w-[360px] flex items-center"><img src={desc} className='w-4 h-4' alt="" />{project.desc}</motion.p>
 
-                                <motion.img className="w-[300px] md:w-[380px] h-52 md:h-[300px] border border-green-800 rounded object-cover" src={project.img} alt='project_image' />
+                                <motion.img className="w-[300px] md:w-[365px] h-52 md:h-[300px] border border-green-800 rounded object-cover" src={project.img} alt='project_image' />
 
                                 <motion.p className="w-[300px] md:w-[350px]">Made with: {project.madeWith}</motion.p>
                                 <motion.a href={project.link} target="_blank" rel="noopener noreferrer" className="w-[300px] md:w-[350px] text-green-600">{project.link}</motion.a>
