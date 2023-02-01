@@ -1,4 +1,5 @@
-# Project built by myself, divided into intro, project, skills.
+# Portfolio page by Aid 2022©
+  Project built by myself, divided into intro, project, skills.
   Also there is contact me system configured with Email.js, also page view counter configured with CountApi.js
 
 # Getting Started with Create React App
