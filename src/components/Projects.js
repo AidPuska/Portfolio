@@ -1,16 +1,13 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import desc from '../assets/desc.svg'
 import title from '../assets/title.svg'
-import leftArrow from '../assets/left.png'
-import rightArrow from '../assets/right.png'
 import { InView } from "react-intersection-observer"
 import { projects } from "../data"
-import { useState } from "react"
 
 
 const Projects = ({ forwardedRef }) => {
 
-    const defImage = 'https://i.stack.imgur.com/mwFzF.png'
+    //const defImage = 'https://i.stack.imgur.com/mwFzF.png'
 
 
     return (

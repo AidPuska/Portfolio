@@ -6,7 +6,7 @@
 
 @layer components {
   .back {
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), repeating-linear-gradient(#ebebeb55, #e7e7e7);
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), repeating-linear-gradient(#d4cacaa2, #e7e7e7);
     background-color: white;
     opacity: 0.8;
   }
