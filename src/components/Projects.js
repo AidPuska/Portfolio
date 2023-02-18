@@ -17,9 +17,11 @@ const Projects = ({ forwardedRef }) => {
                     <InView>
                         {({ ref, inView }) => (
                             <motion.div
-                                initial={{ opacity: 0.5, scale: 0.5, }}
-                                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0.5, scale: 0.5 }}
-                                transition={{ duration: 0.8 }}
+                                initial={{ y: 200 }}
+                                //animate={inView ? { opacity: 1, scale: 1 } : { x: -100}}
+                                animate={inView ? { y: 0 } : { y: 200 }}
+                                //transition={{ duration: 0.8 }}
+                                transition={{ duration: 0.4 }}
                                 ref={ref}
                                 key={index}
                                 className="shadow-md bg-white shadow-black/50 rounded-sm flex flex-col items-center mx-0 md:mx-6 my-16 p-4 gap-4 border-black"

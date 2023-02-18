@@ -92,7 +92,7 @@ const Intro = ({ projectRef, footerRef, skillsRef }) => {
                 </motion.div>
             </div>
 
-            <motion.button
+            {/* <motion.button
                 variants={buttonVariants}
                 whileHover='hover'
                 className='absolute left-1/2 top-[85%]'
@@ -102,7 +102,10 @@ const Intro = ({ projectRef, footerRef, skillsRef }) => {
                 transition={{ delay: 1, type: 'spring', duration: 0.5 }}
             >
                 <img src={down} className='w-12 h-12' alt="" />
-            </motion.button>
+            </motion.button> */}
+            <button className='absolute left-1/2 top-[85%]' onClick={handleClick}>
+                <img src={down} className='w-12 h-12 hover:animate-bounce' alt="" />
+            </button>
         </div>
     )
 }
