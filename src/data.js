@@ -2,6 +2,7 @@ import yelp from './assets/yelpcamp.png'
 import proManag from './assets/proManag.png'
 import portfolio from './assets/portfolio.png'
 import vaktija from './assets/vaktija.png'
+import movie from './assets/moviedb.png'
 
 
 export const projects = [
@@ -11,7 +12,7 @@ export const projects = [
         desc: 'Site for making new campgrounds, reviewing other campgrounds by commenting them, giving them grade.',
         img: yelp,
         madeWith: 'MEN Stack(Mongo DB with mongoose, Express and Node)',
-        link: '//'
+        link: 'https://github.com/AidPuska/YelpCamp-project'
     },
     {
         id: 1,
@@ -44,5 +45,13 @@ export const projects = [
         img: vaktija,
         madeWith: 'React, Pure CSS, Mapbox, Vaktija Api',
         link: 'https://vaktijainteractivemap.netlify.app/'
+    },
+    {
+        id: 5,
+        name: 'Movies and tv shows',
+        desc: 'Get random movie, search for movies/tv shows, see popular movies and tv shows, and upcoming movies',
+        img: movie,
+        madeWith: 'React, TailwindCSS, TMDB Api',
+        link: 'https://github.com/AidPuska/movie-database'
     }
 ]

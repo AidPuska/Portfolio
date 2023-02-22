@@ -4,6 +4,7 @@ import Intro from "../../components/Intro"
 import Projects from "../../components/Projects"
 import goUp from '../../assets/goup.svg'
 import Skills from "../../components/Skills"
+import Contact from "../../components/Contact"
 
 
 const Home = () => {
@@ -52,6 +53,7 @@ const Home = () => {
             <Intro projectRef={projectRef} footerRef={footerRef} skillsRef={skillsRef} />
             <Projects forwardedRef={projectRef} />
             <Skills forwardedRef={skillsRef} />
+            <Contact />
             <Footer forwardedRef={footerRef} />
 
             {isVisible && <div onClick={toTop} className="fixed bottom-5 md:bottom-1 right-5 md:right-1 cursor-pointer"><img className="w-10 h-10" src={goUp} alt="" /></div>}
