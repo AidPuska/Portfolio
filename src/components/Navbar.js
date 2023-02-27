@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 const Navbar = ({ projectRef, footerRef, skillsRef }) => {
 
@@ -8,8 +7,6 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
 
     const handleClick = async () => {
         setView(!view)
-        const res = await fetch('./netlify/functions/func')
-            .then(response => console.log(response))
     }
 
     const goToProjects = () => {
@@ -29,10 +26,10 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
 
     return (
         <div>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, type: 'spring' }} className="flex bg-gradient-to-r from-green-700 to-[#192030]/75 w-full mt-5 rounded-md absolute top-0 right-0 justify-between items-center h-20">
-                <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} className='py-4 px-4 text-[#ffeaee] text-lg'>Portfolio</motion.p>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, type: 'spring' }} className={"flex bg-green-800/50 mx-5 w-[90%] md:w-[97%] mt-5 absolute top-0 right-0 justify-between items-center"}>
+                <motion.p initial={{ x: -200 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} className='py-4 px-4 text-[#ffeaee] text-lg ml-2'>Portfolio</motion.p>
 
-                <motion.ul initial={{ x: 400 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} class="hidden md:flex flex-row gap-4 py-4 px-4">
+                <motion.ul initial={{ x: 400 }} animate={{ x: 0 }} transition={{ delay: 1, type: 'spring' }} class="hidden md:flex flex-row gap-4 py-4 px-4 mr-2">
                     <motion.li onClick={goToProjects} whileHover={{ y: -10, rotate: -10 }} className="text-[#ffeaee] cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Projects</motion.li>
                     <motion.li onClick={goToSkills} whileHover={{ y: -10, rotate: -10 }} className="text-[#ffeaee] cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Skills</motion.li>
                     <motion.li onClick={goToFooter} whileHover={{ y: -10, rotate: -10 }} className="text-[#ffeaee] cursor-pointer font-light hover:font-normal hover:border-b hover:border-white">Contact</motion.li>
@@ -54,12 +51,7 @@ const Navbar = ({ projectRef, footerRef, skillsRef }) => {
                     </ul>
                 </div>}
             </motion.div>
-
-
-
         </div>
-
-
     )
 }
 

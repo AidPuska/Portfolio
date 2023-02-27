@@ -45,9 +45,6 @@ const Home = () => {
         }
     }, [])
 
-
-
-
     return (
         <div>
             <Intro projectRef={projectRef} footerRef={footerRef} skillsRef={skillsRef} />
