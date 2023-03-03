@@ -5,6 +5,7 @@ import Projects from "../../components/Projects"
 import goUp from '../../assets/goup.svg'
 import Skills from "../../components/Skills"
 import Contact from "../../components/Contact"
+import Project from "../../components/Project"
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
     const skillsRef = useRef(null)
 
     const [isVisible, setIsVisible] = useState(false)
+    const [changeStyle, setChangeStyle] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
@@ -48,7 +50,12 @@ const Home = () => {
     return (
         <div>
             <Intro projectRef={projectRef} footerRef={footerRef} skillsRef={skillsRef} />
-            <Projects forwardedRef={projectRef} />
+            {changeStyle
+                ?
+                <Projects forwardedRef={projectRef} setChangeStyle={setChangeStyle} changeStyle={changeStyle} />
+                :
+                <Project forwardedRef={projectRef} setChangeStyle={setChangeStyle} changeStyle={changeStyle} />
+            }
             <Skills forwardedRef={skillsRef} />
             <Contact />
             <Footer forwardedRef={footerRef} />

@@ -9,7 +9,7 @@ export const projects = [
     {
         id: 0,
         name: 'Yelp Camp',
-        desc: 'Site for making new campgrounds, reviewing other campgrounds by commenting them, giving them grade.',
+        desc: 'Site for making new campgrounds, reviewing other campgrounds by commenting them, giving them grade. Register/Login system implemented. When you check one campground it shows him on map. Map implemented via MapBox',
         img: yelp,
         madeWith: 'MEN Stack(Mongo DB with mongoose, Express and Node)',
         link: 'https://github.com/AidPuska/YelpCamp-project'
