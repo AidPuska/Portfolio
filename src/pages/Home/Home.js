@@ -6,9 +6,18 @@ import goUp from '../../assets/goup.svg'
 import Skills from "../../components/Skills"
 import Contact from "../../components/Contact"
 import Project from "../../components/Project"
+import ReactGA from 'react-ga';
 
+const TRACK_ID = 'G-XXHTYFMLDB';
+
+ReactGA.initialize(TRACK_ID);
 
 const Home = () => {
+
+    useEffect(() => {
+        ReactGA.ga('send', 'pageview', '/')
+    }, [])
+
     const projectRef = useRef(null)
     const footerRef = useRef(null)
     const skillsRef = useRef(null)
