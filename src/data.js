@@ -3,6 +3,7 @@ import proManag from './assets/proManag.png'
 import portfolio from './assets/portfolio.png'
 import vaktija from './assets/vaktija.png'
 import movie from './assets/moviedb.png'
+const webScraper = require('./assets/web-scraper.png')
 const dall = require('./assets/dall-e.png')
 
 
@@ -62,5 +63,13 @@ export const projects = [
         img: dall,
         madeWith: "MERN stack, openAi",
         link: "https://dall-e-aid.netlify.app"
+    },
+    {
+        id: 6,
+        name: "Web scraper",
+        desc: "With this you can scrape any olx.ba category, where you'll get products price, name and picture, in plan for better functionality",
+        img: webScraper,
+        madeWith: "MERN stack",
+        link: "https://github.com/AidPuska/web-scraper"
     }
 ]
